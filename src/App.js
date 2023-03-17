@@ -1,8 +1,6 @@
-
-
 import Changepic from './First/first';
 import InputCompo from './Second/input'
-import Login from './Third/index'
+import Form from './Third/index'
 
 function App() {
   const pics = [
@@ -16,7 +14,7 @@ function App() {
     <>
       <Changepic  source = {pics} />
       <InputCompo/>
-      <Login/>
+      <Form/>
     </>
   );
 }

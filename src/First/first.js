@@ -16,7 +16,7 @@ function Changepic(props){
         <div className='main-div'>
             <div className='container'>
                 <div className='image-part'>
-                    <img src={props.source[image]} alt='' />
+                    <img src={props.source[image]} alt=''   />
                 </div>
                 <div className='button-part'>
                     <button onClick={handleClick}>Change Image</button>

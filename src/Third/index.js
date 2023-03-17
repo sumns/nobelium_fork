@@ -1,28 +1,38 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import './login.css'
 
-function Login(){
-    const[input , setInput] = useState(false)
+export default function Form(){
+    const[isAllFieldsVisible , setIsAllFieldsVisible] = useState(false)
+
+    function handleClick(){
+        setIsAllFieldsVisible(true)
+    }
+
     return(
-        <div>
-            {input ? <Login/> : ' '}
-            {input != true ? <Signup/> : ' '}
-            <button
-                onClick={()=>{
-                    setInput(!input)
-                }}
-            >
-                SignIn     
-            </button>
 
-            <button
-                onClick={()=>{
-                    setInput(!input)
-                }}
-            >
-                Signup    
-            </button>
+        <div className="containerLogin" >
+            { isAllFieldsVisible &&
+                <Fragment>
+                    <div>
+                        <input placeholder="first name " />
+                    </div>
+
+                    <div>
+                        <input placeholder="last name" />
+                    </div>
+                </Fragment>
+            }
+
+            <div>
+                <input placeholder="email" />
+            </div>
+
+            <div>
+                <input placeholder="password" />
+            </div>
+
+            <p onClick={handleClick}  > Dont have account ? SignUp</p>
+            
         </div>
     )
 }
-
-export default Login
