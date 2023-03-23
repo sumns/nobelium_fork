@@ -1,13 +1,15 @@
-
 // import './App.css';
-// import ImgChanger from './Components/img-changer/img-changer';
-import Navbar from './Components/navbar';
+import Tiktaktoe from './TikTakToe/game'
+
+import Scroll from './Componanet/scroll';
+
 function App() {
   return (
     <div className="App">
-      {/* <ImgChanger/> */}
 
-      <Navbar/>
+      {/* <Scroll/> */}
+      <Tiktaktoe/>
+
     </div>
   );
 }
